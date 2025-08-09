@@ -1,3 +1,6 @@
+
+
+
 const AboutSection = () => {
 
     return (
@@ -20,13 +23,10 @@ const AboutSection = () => {
               <div className="space-y-6 animate-slide-in-left">
                 <div className="space-y-4">
                   <h3 className="text-2xl font-semibold gradient-text">
-                    Passionate Frontend Developer
+                    Passionate Software Developer
                   </h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    I'm a creative frontend developer with a passion for building beautiful, 
-                    functional, and user-centered digital experiences. With expertise in modern 
-                    web technologies and a keen eye for design, I transform ideas into engaging 
-                    web applications.
+                  I'm a full stack developer with a strong focus on frontend development. I specialize in crafting user-centered, visually compelling web applications using modern technologies. With a solid understanding of backend systems, I bridge the gap between design and functionality to deliver seamless digital experiences.
                   </p>
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     When I'm not coding, you'll find me exploring new technologies, contributing 
@@ -36,9 +36,9 @@ const AboutSection = () => {
                 </div>
   
                 {/* Stats */}
-                <div className="grid grid-cols-3 gap-6 mt-8">
+                {/* <div className="grid grid-cols-3 gap-6 mt-8">
                   {[
-                    { number: '50+', label: 'Projects Completed' },
+                    { number: '5+', label: 'Projects Completed' },
                     { number: '3+', label: 'Years Experience' },
                     { number: '100%', label: 'Client Satisfaction' }
                   ].map((stat, index) => (
@@ -50,7 +50,7 @@ const AboutSection = () => {
                       <div className="text-sm text-muted-foreground">{stat.label}</div>
                     </div>
                   ))}
-                </div>
+                </div> */}
               </div>
   
               {/* Right Side - Personal Info */}

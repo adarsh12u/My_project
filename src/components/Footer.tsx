@@ -1,3 +1,8 @@
+import { CiLinkedin } from "react-icons/ci";
+import { FaGithub } from "react-icons/fa";
+import { LiaHackerrank } from "react-icons/lia";
+import { SiLeetcode } from "react-icons/si";
+
 const Footer = () => {
     const currentYear = new Date().getFullYear();
   
@@ -31,7 +36,7 @@ const Footer = () => {
               {/* Brand Section */}
               <div className="space-y-4 animate-fade-in-up">
                 <div className="text-2xl font-bold gradient-text">
-                  John Doe
+                  Adarsh Gurjar
                 </div>
                 <p className="text-muted-foreground max-w-sm">
                   Frontend Developer passionate about creating beautiful, 
@@ -39,10 +44,10 @@ const Footer = () => {
                 </p>
                 <div className="flex space-x-4">
                   {[
-                    { icon: '⚡', url: 'https://github.com', label: 'GitHub' },
-                    { icon: '🔗', url: 'https://linkedin.com', label: 'LinkedIn' },
-                    { icon: '🐦', url: 'https://twitter.com', label: 'Twitter' },
-                    { icon: '📧', url: 'mailto:john.doe@example.com', label: 'Email' }
+                    { icon: <FaGithub size={28} />, url: 'https://github.com/adarsh12u', label: 'GitHub' },
+                    { icon: <CiLinkedin size={28} />, url: 'https://www.linkedin.com/in/adarsh-gurjar-6170b0249/', label: 'LinkedIn' },
+                    { icon: <SiLeetcode size={25} />, url: 'https://leetcode.com/Adarshgurjar123/', label: 'Leetcode' },
+                    { icon: <LiaHackerrank size={30} />, url: 'https://www.hackerrank.com/profile/adarsh7470827890', label: 'HackerRank' }
                   ].map((social, index) => (
                     <a
                       key={social.label}
@@ -94,21 +99,21 @@ const Footer = () => {
                       href="mailto:john.doe@example.com"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      john.doe@example.com
+                      adarsh7470827890@gmail.com
                     </a>
                   </div>
                   <div className="flex items-center space-x-3">
                     <span className="text-primary">📱</span>
                     <a 
-                      href="tel:+15551234567"
+                      href="tel:+917999427830"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      +1 (555) 123-4567
+                      +91 7999427830
                     </a>
                   </div>
                   <div className="flex items-center space-x-3">
                     <span className="text-primary">📍</span>
-                    <span className="text-muted-foreground">San Francisco, CA</span>
+                    <span className="text-muted-foreground">Indore, MP</span>
                   </div>
                 </div>
                 
@@ -126,7 +131,7 @@ const Footer = () => {
                 {/* Copyright */}
                 <div className="text-center md:text-left animate-fade-in-up animate-delay-600">
                   <p className="text-muted-foreground text-sm">
-                    © {currentYear} John Doe. All rights reserved.
+                    © {currentYear} Adarsh Gurjar. All rights reserved.
                   </p>
                   <p className="text-muted-foreground text-xs mt-1">
                     Built with React, TypeScript & Tailwind CSS

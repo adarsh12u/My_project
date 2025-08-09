@@ -1,23 +1,53 @@
 import { useState, useEffect } from 'react';
+import {
+  SiC,
+  SiTypescript,
+  SiJavascript,
+  SiGraphql,
+  SiHtml5,
+  SiCss3,
+  SiEslint,
+  SiNextdotjs,
+  SiReact,
+  SiExpress,
+  SiNodedotjs,
+  SiGit,
+  SiGithub,
+  SiDocker,
+  SiPostman,
+  SiFigma,
+  SiMongodb,
+  SiMysql,
+  SiRedis,
+  SiPython,
+  SiPostgresql
+} from "react-icons/si";
+
+import { FaJava } from "react-icons/fa";
+// import { DiC } from "react-icons/di";
 
 const SkillsSection = () => {
   const [visibleSkills, setVisibleSkills] = useState<boolean[]>([]);
 
   const skills = [
-    { name: 'React', icon: '⚛️' },
-    { name: 'TypeScript', icon: '🔷' },
-    { name: 'JavaScript', icon: '💛' },
-    { name: 'Next.js', icon: '▲' },
-    { name: 'Tailwind CSS', icon: '🎨' },
-    { name: 'Node.js', icon: '🟢' },
-    { name: 'Python', icon: '🐍' },
-    { name: 'UI/UX Design', icon: '🎭' },
-    { name: 'Vue.js', icon: '💚' },
-    { name: 'Angular', icon: '🔴' },
-    { name: 'PostgreSQL', icon: '🐘' },
-    { name: 'MongoDB', icon: '🍃' }
+    { name: 'C', icon: <SiC className="text-blue-500" /> },
+    { name: 'Java', icon: <FaJava className="text-[#007396]" /> },
+    { name: 'TypeScript', icon: <SiTypescript className="text-blue-600" /> },
+    { name: 'JavaScript', icon: <SiJavascript className="text-yellow-400" /> },
+    { name: 'GraphQL', icon: <SiGraphql className="text-pink-500" /> },
+ 
+    { name: 'Next.js', icon: <SiNextdotjs className="text-blue-500 dark:text-white" /> },
+    { name: 'React.js', icon: <SiReact className="text-cyan-400" /> },
+    { name: 'Express.js', icon: <SiExpress className="text-gray-800 dark:text-gray-200" /> },
+    { name: 'Node.js', icon: <SiNodedotjs className="text-green-600" /> },
+    { name: 'Git', icon: <SiGit className="text-orange-500" /> },
+    { name: 'Docker', icon: <SiDocker className="text-blue-400" /> },
+    { name: 'Postman', icon: <SiPostman className="text-orange-500" /> },
+    { name: 'MongoDB', icon: <SiMongodb className="text-green-500" /> },
+    { name: 'MySQL', icon: <SiMysql className="text-blue-700" /> },
+    { name: 'Redis', icon: <SiRedis className="text-red-600" /> },
   ];
-
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -105,7 +135,7 @@ const SkillsSection = () => {
           </div>
 
           {/* Skill Categories */}
-          <div className="mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* <div className="mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 title: 'Frontend Development',
@@ -158,7 +188,7 @@ const SkillsSection = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

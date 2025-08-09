@@ -3,71 +3,153 @@ import { useState } from 'react';
 const ProjectsSection = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
+
+
+
+//   export const projects = [
+//     {
+//        id: nanoid(),
+//        img: '/image.png',
+//        url:'https://blog-frontend-jet-phi.vercel.app/',
+//        github:'https://github.com/adarsh12u/blog-market-Application-',
+//        title:'Blog Application',
+//        data:'The Application I have developed allows users to create their own blog, where users can publish their own opinions.A blog application is basically a web site which is used for chronological listing of blog posts'
+       
+       
+//        ,tech:['React','Node','Mongodb','Material UI']
+//     },
+//     {
+//        id: nanoid(),
+//        img: '/com.jpg',
+//        url:'https://comfy-store-mern-sq7p.vercel.app/',
+//        github:'https://github.com/adarsh12u/Comfy_Store_MERN',
+//        title:'Comfy Store',
+//        data:'Comfy Store is an e-commerce platform where users can search products using filters or pagination. Built with React Query and Tailwind CSS, and Redux Toolkit for state management.'
+       
+       
+//        ,tech:['React','Node','Mongodb','Material UI']
+//     },
+//        {
+//           id: nanoid(),
+//           img: '/fotor-ai-202401161904.jpg',
+//           url:'https://hr-management-system-lac.vercel.app/',
+//           github:'https://github.com/adarsh12u/HR-MANAGEMENT-SYSTEM',
+//           title:'HR management system',
+//           data:'A HR management system website that have auth section to create users and reset password and most important here you can perform crud operation you can add, delete , update the client '
+//           ,tech:['React','Node','Mongodb','Material UI']
+//        },
+//        // {
+//        //    id: nanoid(),
+//        //    img: '/fotor-ai-2024011619138.jpg',
+//        //    url:'https://image-generator-ruby.vercel.app/',
+//        //    github:'https://github.com/adarsh12u/ImageGenerator',
+//        //    title:'Image Generator',
+//        //    data:'In my Image Generator project, I have combined technology and creativity to create a digital art experience using the power of the Unsplash API. here you can search images as per your choice '
+//        //    ,tech:['React','React Query']
+//        // },
+//        // {
+//        //    id: nanoid(),
+//        //    img: 'https://images.pexels.com/photos/12883026/pexels-photo-12883026.jpeg?auto=compress&cs=tinysrgb&w=800',
+//        //    url:'https://react-todo-cyan-xi.vercel.app/',
+//        //    github:'https://github.com/adarsh12u/React_todo',
+//        //    title:'TODO List',
+//        //    data:'Created a user-friendly TODO List app—just jot down tasks and tick them off. Simple and effective for staying organized. Tech meets practicality for a seamless task management experience '
+//        //    ,tech:['React','Mterial UI']
+//        // },
+//        {
+//           id: nanoid(),
+//           img: 'https://res-2.cloudinary.com/under-the-hood-learning/image/upload/q_auto/v1/blog_images/MVC-Vanilla-JS.png',
+//           url:'https://content-full-cms.vercel.app/',
+//           github:'https://github.com/adarsh12u/ContentFullCMS',
+//           title:'Vanilla javascript projects',
+//           data:'Developed a few projects, including a Password validator, Todo list, Tip calculator, Chrome extension, and Number game using Vanilla Javascript to tackle core JavaScript concepts.'
+//           ,tech:['HTML','CSS','javascript']
+//        },
+      
+ 
+ 
+//  ]
+
+
+
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce platform with advanced features like real-time inventory, payment processing, and order tracking.',
-      image: '/api/placeholder/400/250',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      title: 'Blog Application',
+      description: 'The Application I have developed allows users to create their own blog, where users can publish their own opinions.A blog application is basically a web site which is used for chronological listing of blog posts',
+      image: '/image.png',
+      technologies: ['React','Node','Mongodb','Material UI'],
       category: 'fullstack',
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://demo.com',
-      featured: true
+      githubUrl: 'https://github.com/adarsh12u/blog-market-Application-',
+      liveUrl: 'https://blog-frontend-jet-phi.vercel.app/',
+      featured: false
     },
+
+
+
+
+
+
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, file sharing, and team collaboration features.',
-      image: '/api/placeholder/400/250',
-      technologies: ['React', 'TypeScript', 'Firebase', 'Material-UI'],
+      title: 'Comfy Store',
+      description: 'Comfy Store is an e-commerce platform where users can search products using filters or pagination. Built with React Query and Tailwind CSS, and Redux Toolkit for state management.',
+      image: '/com.jpg',
+      technologies: ['React','Node','Mongodb','Material UI'],
       category: 'frontend',
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://demo.com',
-      featured: true
+      githubUrl: 'https://github.com/adarsh12u/Comfy_Store_MERN',
+      liveUrl: 'https://comfy-store-mern-sq7p.vercel.app/',
+      featured: false
     },
+
+
+   
     {
       id: 3,
-      title: 'Weather Analytics Dashboard',
-      description: 'Interactive dashboard for weather data visualization with charts, maps, and predictive analytics.',
-      image: '/api/placeholder/400/250',
-      technologies: ['React', 'D3.js', 'Python', 'FastAPI'],
-      category: 'frontend',
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://demo.com',
+      title: 'HR management system',
+      description: 'A HR management system website that have auth section to create users and reset password and most important here you can perform crud operation you can add, delete , update the client ',
+      image: '/fotor-ai-202401161904.jpg',
+      technologies: ['React','Node','Mongodb','Material UI'],
+      category: 'fullstack',
+      githubUrl: 'https://github.com/adarsh12u/HR-MANAGEMENT-SYSTEM',
+      liveUrl: 'https://hr-management-system-lac.vercel.app/',
       featured: false
     },
+
+
     {
       id: 4,
-      title: 'API Gateway Service',
-      description: 'Microservices API gateway with authentication, rate limiting, and monitoring capabilities.',
-      image: '/api/placeholder/400/250',
-      technologies: ['Node.js', 'Express', 'Redis', 'Docker'],
-      category: 'backend',
-      githubUrl: 'https://github.com',
-      liveUrl: null,
+      title: 'Image Generator',
+      description: 'In my Image Generator project, I have combined technology and creativity to create a digital art experience using the power of the Unsplash API. here you can search images as per your choice ',
+      image: '/fotor-ai-2024011619138.jpg',
+      technologies: ['React','React Query'],
+      category: 'frontend',
+      githubUrl: 'https://github.com/adarsh12u/ImageGenerator',
+      liveUrl: 'https://image-generator-ruby.vercel.app/',
       featured: false
     },
+
     {
       id: 5,
-      title: 'Real-time Chat Application',
-      description: 'Scalable chat application with multiple rooms, file sharing, and video calling features.',
-      image: '/api/placeholder/400/250',
-      technologies: ['React', 'Socket.io', 'Node.js', 'PostgreSQL'],
-      category: 'fullstack',
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://demo.com',
-      featured: true
+      title: 'TODO List',
+      description: 'Created a user-friendly TODO List app—just jot down tasks and tick them off. Simple and effective for staying organized. Tech meets practicality for a seamless task management experience ',
+      image: 'https://images.pexels.com/photos/12883026/pexels-photo-12883026.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['React','Mterial UI'],
+      category: 'frontend',
+      githubUrl: 'https://github.com/adarsh12u/React_todo',
+      liveUrl: 'https://react-todo-cyan-xi.vercel.app/',
+      featured: false
     },
+   
     {
       id: 6,
-      title: 'Portfolio Website',
-      description: 'Responsive portfolio website with animations, dark mode, and content management system.',
-      image: '/api/placeholder/400/250',
-      technologies: ['React', 'Tailwind', 'Framer Motion', 'Sanity'],
+      title: 'Vanilla javascript projects',
+      description: 'Developed a few projects, including a Password validator, Todo list, Tip calculator, Chrome extension, and Number game using Vanilla Javascript to tackle core JavaScript concepts.',
+      image: 'https://res-2.cloudinary.com/under-the-hood-learning/image/upload/q_auto/v1/blog_images/MVC-Vanilla-JS.png',
+      technologies: ['HTML','CSS','javascript'],
       category: 'frontend',
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://demo.com',
+      githubUrl: 'https://github.com/adarsh12u/ContentFullCMS',
+      liveUrl: 'https://content-full-cms.vercel.app/',
       featured: false
     }
   ];
@@ -75,7 +157,7 @@ const ProjectsSection = () => {
   const filters = [
     { id: 'all', label: 'All Projects' },
     { id: 'frontend', label: 'Frontend' },
-    { id: 'backend', label: 'Backend' },
+    // { id: 'backend', label: 'Backend' },
     { id: 'fullstack', label: 'Full Stack' }
   ];
 
@@ -135,7 +217,7 @@ const ProjectsSection = () => {
                 {/* Project Image */}
                 <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20">
                   <div className="absolute inset-0 flex items-center justify-center text-6xl opacity-50">
-                    💻
+                    <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
                   </div>
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center space-x-4">
@@ -228,7 +310,7 @@ const ProjectsSection = () => {
 
           {/* View All Projects Button */}
           <div className="text-center mt-12 animate-fade-in-up animate-delay-600">
-            <button className="px-8 py-4 bg-gradient-primary text-white font-medium rounded-lg hover-glow hover-scale transition-all duration-300">
+            <button onClick={() => window.open('https://github.com/adarsh12u', '_blank')} className="px-8 py-4 bg-gradient-primary text-white font-medium rounded-lg hover-glow hover-scale transition-all duration-300">
               View All Projects on GitHub
             </button>
           </div>

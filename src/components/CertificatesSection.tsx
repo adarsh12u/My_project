@@ -3,68 +3,59 @@ import { useState } from 'react';
 const CertificatesSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // import { nanoid } from "nanoid";
+
   const certificates = [
     {
       id: 1,
-      title: 'React Developer Certification',
-      issuer: 'Meta',
-      date: '2024',
-      image: '/api/placeholder/300/200',
-      description: 'Advanced React concepts including hooks, context, and performance optimization.',
-      credentialId: 'META-REACT-2024-001',
-      skills: ['React', 'Hooks', 'Context API', 'Performance']
+      title: "Google Git and GitHub",
+      issuer: "Google",
+      date: "2023",
+      image: "/scree.png",
+      url: "https://drive.google.com/file/d/1mbgI3vBMvmFcMUksS3oWZjbP0XsRzWYw/view?usp=sharing",
+      description:
+        "Completed Google Git and GitHub course, covering version control, collaboration, and repository management.",
+      credentialId: "GOOGLE-GIT-2024-001",
+      skills: ["Git", "GitHub", "Version Control", "Collaboration"]
     },
     {
       id: 2,
-      title: 'AWS Cloud Practitioner',
-      issuer: 'Amazon Web Services',
-      date: '2023',
-      image: '/api/placeholder/300/200',
-      description: 'Foundational understanding of AWS cloud services and architecture.',
-      credentialId: 'AWS-CP-2023-789',
-      skills: ['AWS', 'Cloud Computing', 'EC2', 'S3']
+      title: "NPTEL Online Certification",
+      issuer: "NPTEL",
+      date: "2023",
+      image: "/nptel.png",
+      url: "https://drive.google.com/file/d/1L_yTGrMlIRq5ExGiE-gLv4w9vACS7-jO/view?usp=drivesdk",
+      description:
+        "Certification from NPTEL covering advanced computer science concepts and applications.",
+      credentialId: "NPTEL-CS-2024-002",
+      skills: ["Programming", "Problem Solving", "Algorithms"]
     },
     {
       id: 3,
-      title: 'JavaScript Algorithms and Data Structures',
-      issuer: 'freeCodeCamp',
-      date: '2023',
-      image: '/api/placeholder/300/200',
-      description: 'Comprehensive course covering JavaScript fundamentals and algorithmic thinking.',
-      credentialId: 'FCC-JS-2023-456',
-      skills: ['JavaScript', 'Algorithms', 'Data Structures', 'Problem Solving']
+      title: "JavaScript Fundamentals",
+      issuer: "HackerRank",
+      date: "2023",
+      image: "/javascript.png",
+      url: "https://drive.google.com/file/d/1yAiJ-YZQIiVcSTcS4kzz6W5aLizkuq6A/view?usp=drivesdk",
+      description:
+        "Course covering JavaScript basics, DOM manipulation, and functional programming concepts.",
+      credentialId: "FCC-JS-2023-003",
+      skills: ["JavaScript", "DOM", "ES6", "Functional Programming"]
     },
     {
       id: 4,
-      title: 'Google UX Design Certificate',
-      issuer: 'Google',
-      date: '2022',
-      image: '/api/placeholder/300/200',
-      description: 'Complete UX design process from research to prototyping and testing.',
-      credentialId: 'GOOGLE-UX-2022-123',
-      skills: ['UX Design', 'Figma', 'User Research', 'Prototyping']
-    },
-    {
-      id: 5,
-      title: 'TypeScript Fundamentals',
-      issuer: 'Microsoft',
-      date: '2022',
-      image: '/api/placeholder/300/200',
-      description: 'Mastering TypeScript for large-scale application development.',
-      credentialId: 'MS-TS-2022-567',
-      skills: ['TypeScript', 'Type Safety', 'Interfaces', 'Generics']
-    },
-    {
-      id: 6,
-      title: 'Node.js Application Development',
-      issuer: 'Linux Foundation',
-      date: '2021',
-      image: '/api/placeholder/300/200',
-      description: 'Building scalable server-side applications with Node.js and Express.',
-      credentialId: 'LF-NODE-2021-890',
-      skills: ['Node.js', 'Express', 'API Development', 'Database Integration']
+      title: "Java Programming",
+      issuer: "HackerRank",
+      date: "2023",
+      image: "/java.png",
+      url: "https://drive.google.com/file/d/1hymydEuSFUXA1vSz2qlJ15mYFJBHGAzx/view?usp=drivesdk",
+      description:
+        "Java programming course covering OOP concepts, data structures, and application development.",
+      credentialId: "ORACLE-JAVA-2023-004",
+      skills: ["Java", "OOP", "Data Structures", "Application Development"]
     }
   ];
+  
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % Math.ceil(certificates.length / 3));
@@ -106,73 +97,75 @@ const CertificatesSection = () => {
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
-                {Array.from({ length: Math.ceil(certificates.length / 3) }).map((_, slideIndex) => (
-                  <div key={slideIndex} className="w-full flex-shrink-0">
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
-                      {certificates
-                        .slice(slideIndex * 3, slideIndex * 3 + 3)
-                        .map((certificate, index) => (
-                          <div
-                            key={certificate.id}
-                            className={`group bg-card/50 backdrop-blur-sm border border-border rounded-xl overflow-hidden hover:border-primary/30 transition-all duration-500 hover-glow animate-scale-in animate-delay-${index * 100}`}
-                          >
-                            {/* Certificate Image */}
-                            <div className="relative h-48 bg-gradient-to-br from-primary/20 to-accent/20 overflow-hidden">
-                              <div className="absolute inset-0 flex items-center justify-center text-6xl opacity-50">
-                                🏆
-                              </div>
-                              
-                              {/* Hover Overlay */}
-                              <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
-                                <button className="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-lg text-white font-medium hover:bg-white/30 transition-all duration-200">
-                                  View Certificate
-                                </button>
-                              </div>
-                            </div>
+              {Array.from({ length: Math.ceil(certificates.length / 3) }).map((_, slideIndex) => (
+  <div key={slideIndex} className="w-full flex-shrink-0">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+      {certificates
+        .slice(slideIndex * 3, slideIndex * 3 + 3)
+        .map((certificate, index) => (
+          <div
+            key={certificate.id}
+            className={`group bg-card/50 backdrop-blur-sm border border-border rounded-xl overflow-hidden hover:border-primary/30 transition-all duration-500 hover-glow animate-scale-in animate-delay-${index * 100}`}
+          >
+            {/* Certificate Image */}
+            <div className="relative h-56 bg-gradient-to-br from-primary/20 to-accent/20 overflow-hidden">
+              <img
+                src={certificate.image}
+                alt={certificate.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
 
-                            {/* Certificate Content */}
-                            <div className="p-6 space-y-4">
-                              {/* Header */}
-                              <div>
-                                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors mb-1">
-                                  {certificate.title}
-                                </h3>
-                                <div className="flex items-center justify-between">
-                                  <p className="text-primary font-medium">{certificate.issuer}</p>
-                                  <span className="text-sm text-muted-foreground">{certificate.date}</span>
-                                </div>
-                              </div>
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                <a
+                  href={certificate.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-lg text-white font-medium hover:bg-white/30 transition-all duration-200"
+                >
+                  View Certificate
+                </a>
+              </div>
+            </div>
 
-                              {/* Description */}
-                              <p className="text-muted-foreground text-sm leading-relaxed">
-                                {certificate.description}
-                              </p>
+            {/* Certificate Content */}
+            <div className="p-6 space-y-4">
+              {/* Header */}
+              <div>
+                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors mb-1">
+                  {certificate.title}
+                </h3>
+                <div className="flex items-center justify-between">
+                  <p className="text-primary font-medium">{certificate.issuer}</p>
+                  <span className="text-sm text-muted-foreground">{certificate.date}</span>
+                </div>
+              </div>
 
-                              {/* Skills */}
-                              <div className="flex flex-wrap gap-2">
-                                {certificate.skills.map((skill, skillIndex) => (
-                                  <span
-                                    key={skill}
-                                    className={`px-2 py-1 bg-secondary/50 text-muted-foreground text-xs rounded-full border border-border hover:border-primary/50 transition-all duration-300 animate-fade-in-up animate-delay-${skillIndex * 50}`}
-                                  >
-                                    {skill}
-                                  </span>
-                                ))}
-                              </div>
+              {/* Description */}
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {certificate.description}
+              </p>
 
-                              {/* Credential ID */}
-                              <div className="pt-4 border-t border-border">
-                                <div className="flex items-center justify-between">
-                                  <span className="text-xs text-muted-foreground">Credential ID:</span>
-                                  <span className="text-xs font-mono text-primary">{certificate.credentialId}</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        ))}
-                    </div>
-                  </div>
-                ))}
+              {/* Skills */}
+              {certificate.skills && (
+                <div className="flex flex-wrap gap-2">
+                  {certificate.skills.map((skill, skillIndex) => (
+                    <span
+                      key={skill}
+                      className={`px-2 py-1 bg-secondary/50 text-muted-foreground text-xs rounded-full border border-border hover:border-primary/50 transition-all duration-300 animate-fade-in-up animate-delay-${skillIndex * 50}`}
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+    </div>
+  </div>
+))}
+
               </div>
             </div>
 
@@ -211,7 +204,7 @@ const CertificatesSection = () => {
           </div>
 
           {/* Certificate Stats */}
-          <div className="mt-20 grid md:grid-cols-4 gap-8">
+          {/* <div className="mt-20 grid md:grid-cols-4 gap-8">
             {[
               { icon: '🏆', number: '6+', label: 'Certifications' },
               { icon: '🎯', number: '4', label: 'Major Platforms' },
@@ -227,7 +220,7 @@ const CertificatesSection = () => {
                 <div className="text-muted-foreground">{stat.label}</div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

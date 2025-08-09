@@ -1,114 +1,48 @@
-import { useState } from 'react';
+import React from "react";
+import { FaGithub } from "react-icons/fa";
+import { CiLinkedin } from "react-icons/ci";
+import { SiLeetcode } from 'react-icons/si';
+import { LiaHackerrank } from "react-icons/lia";
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
-  const [errors, setErrors] = useState<Record<string, string>>({});
-
-  const validateForm = () => {
-    const newErrors: Record<string, string> = {};
-
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-    }
-
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email';
-    }
-
-    if (!formData.subject.trim()) {
-      newErrors.subject = 'Subject is required';
-    }
-
-    if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
-    } else if (formData.message.trim().length < 10) {
-      newErrors.message = 'Message must be at least 10 characters';
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!validateForm()) {
-      // Add shake animation to form
-      const form = e.target as HTMLFormElement;
-      form.classList.add('animate-shake');
-      setTimeout(() => form.classList.remove('animate-shake'), 500);
-      return;
-    }
-
-    setFormStatus('sending');
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setFormStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      
-      // Reset status after 3 seconds
-      setTimeout(() => setFormStatus('idle'), 3000);
-    }, 2000);
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    
-    // Clear error when user starts typing
-    if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: '' }));
-    }
-  };
-
   const contactInfo = [
     {
-      icon: '📧',
-      label: 'Email',
-      value: 'john.doe@example.com',
-      href: 'mailto:john.doe@example.com'
+      icon: "📧",
+      label: "Email",
+      value: "adarsh7470827890@gmail.com",
+      href: "mailto:adarsh7470827890@gmail.com",
     },
     {
-      icon: '📱',
-      label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      icon: "📱",
+      label: "Phone",
+      value: "+91 7999427830",
+      href: "tel:+917999427830",
     },
     {
-      icon: '📍',
-      label: 'Location',
-      value: 'San Francisco, CA',
-      href: null
+      icon: "📍",
+      label: "Location",
+      value: "Indore, MP",
+      href: null,
     },
     {
-      icon: '💼',
-      label: 'LinkedIn',
-      value: 'linkedin.com/in/johndoe',
-      href: 'https://linkedin.com/in/johndoe'
-    }
+      icon: "💼",
+      label: "LinkedIn",
+      value: "linkedin.com/in/adarsh-gurjar-6170b0249/",
+      href: "https://www.linkedin.com/in/adarsh-gurjar-6170b0249/",
+    },
   ];
 
   const socialLinks = [
-    { name: 'GitHub', icon: '⚡', url: 'https://github.com', color: 'hover:text-gray-400' },
-    { name: 'LinkedIn', icon: '🔗', url: 'https://linkedin.com', color: 'hover:text-blue-400' },
-    { name: 'Twitter', icon: '🐦', url: 'https://twitter.com', color: 'hover:text-sky-400' },
-    { name: 'Instagram', icon: '📷', url: 'https://instagram.com', color: 'hover:text-pink-400' }
+    { name: "GitHub", icon: <FaGithub size={28} /> , url: "https://github.com/adarsh12u" },
+    { name: "LinkedIn", icon: <CiLinkedin size={28} /> , url: "https://www.linkedin.com/in/adarsh-gurjar-6170b0249/" },
+    { name: "Leetcode", icon: <SiLeetcode size={25} /> , url: "https://leetcode.com/Adarshgurjar123/" },
+    { name: "HackerRank", icon: <LiaHackerrank size={30} /> , url: "https://www.hackerrank.com/profile/adarsh7470827890" },
   ];
 
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
-      {/* Background Elements */}
       <div className="absolute inset-0 mesh-gradient opacity-30" />
-      
+
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -117,123 +51,84 @@ const ContactSection = () => {
               Get In <span className="gradient-text">Touch</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Ready to collaborate? Let's discuss your project and bring your ideas to life.
+              Ready to collaborate? Let’s discuss your project and bring your ideas to life.
             </p>
             <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full mt-6" />
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-start">
-            {/* Contact Form */}
+            {/* Contact Form (Getform.io) */}
             <div className="animate-slide-in-left">
               <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-8 hover:border-primary/30 transition-all duration-300">
-                <h3 className="text-2xl font-bold mb-6 gradient-text">
-                  Send Me a Message
-                </h3>
-                
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Name Input */}
+                <h3 className="text-2xl font-bold mb-6 gradient-text">Send Me a Message</h3>
+
+                <form
+                  action="https://getform.io/f/3d8f8591-95c3-4d7b-8461-5905a8bd095b"
+                  method="POST"
+                  className="space-y-6"
+                >
+                  {/* Name */}
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                    <label className="block text-sm font-medium text-foreground mb-2">
                       Full Name *
                     </label>
                     <input
                       type="text"
-                      id="name"
                       name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className={`w-full px-4 py-3 bg-secondary/50 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 ${
-                        errors.name ? 'border-destructive' : 'border-border'
-                      }`}
+                      required
+                      className="w-full px-4 py-3 bg-secondary/50 border rounded-lg border-border focus:ring-2 focus:ring-primary focus:border-transparent"
                       placeholder="Your full name"
                     />
-                    {errors.name && (
-                      <p className="mt-1 text-sm text-destructive animate-fade-in-up">{errors.name}</p>
-                    )}
                   </div>
 
-                  {/* Email Input */}
+                  {/* Email */}
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                    <label className="block text-sm font-medium text-foreground mb-2">
                       Email Address *
                     </label>
                     <input
                       type="email"
-                      id="email"
                       name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className={`w-full px-4 py-3 bg-secondary/50 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 ${
-                        errors.email ? 'border-destructive' : 'border-border'
-                      }`}
+                      required
+                      className="w-full px-4 py-3 bg-secondary/50 border rounded-lg border-border focus:ring-2 focus:ring-primary focus:border-transparent"
                       placeholder="your.email@example.com"
                     />
-                    {errors.email && (
-                      <p className="mt-1 text-sm text-destructive animate-fade-in-up">{errors.email}</p>
-                    )}
                   </div>
 
-                  {/* Subject Input */}
+                  {/* Subject */}
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                    <label className="block text-sm font-medium text-foreground mb-2">
                       Subject *
                     </label>
                     <input
                       type="text"
-                      id="subject"
                       name="subject"
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      className={`w-full px-4 py-3 bg-secondary/50 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 ${
-                        errors.subject ? 'border-destructive' : 'border-border'
-                      }`}
+                      required
+                      className="w-full px-4 py-3 bg-secondary/50 border rounded-lg border-border focus:ring-2 focus:ring-primary focus:border-transparent"
                       placeholder="What's this about?"
                     />
-                    {errors.subject && (
-                      <p className="mt-1 text-sm text-destructive animate-fade-in-up">{errors.subject}</p>
-                    )}
                   </div>
 
-                  {/* Message Textarea */}
+                  {/* Message */}
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                    <label className="block text-sm font-medium text-foreground mb-2">
                       Message *
                     </label>
                     <textarea
-                      id="message"
                       name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
                       rows={6}
-                      className={`w-full px-4 py-3 bg-secondary/50 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none ${
-                        errors.message ? 'border-destructive' : 'border-border'
-                      }`}
+                      required
+                      className="w-full px-4 py-3 bg-secondary/50 border rounded-lg border-border focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
                       placeholder="Tell me about your project or just say hello..."
-                    />
-                    {errors.message && (
-                      <p className="mt-1 text-sm text-destructive animate-fade-in-up">{errors.message}</p>
-                    )}
+                    ></textarea>
                   </div>
 
-                  {/* Submit Button */}
+                  {/* Submit */}
                   <button
                     type="submit"
-                    disabled={formStatus === 'sending'}
-                    className="w-full px-8 py-4 bg-gradient-primary text-white font-medium rounded-lg hover-glow hover-scale transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-8 py-4 bg-gradient-primary text-white font-medium rounded-lg hover-glow hover-scale transition-all duration-300"
                   >
-                    {formStatus === 'sending' ? (
-                      <span className="flex items-center justify-center space-x-2">
-                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                        <span>Sending...</span>
-                      </span>
-                    ) : formStatus === 'success' ? (
-                      <span className="flex items-center justify-center space-x-2">
-                        <span>✓</span>
-                        <span>Message Sent!</span>
-                      </span>
-                    ) : (
-                      'Send Message'
-                    )}
+                    Send Message
                   </button>
                 </form>
               </div>
@@ -241,12 +136,8 @@ const ContactSection = () => {
 
             {/* Contact Information */}
             <div className="animate-slide-in-right space-y-8">
-              {/* Contact Info Cards */}
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold gradient-text mb-6">
-                  Contact Information
-                </h3>
-                
+                <h3 className="text-2xl font-bold gradient-text mb-6">Contact Information</h3>
                 {contactInfo.map((info, index) => (
                   <div
                     key={info.label}
@@ -272,11 +163,9 @@ const ContactSection = () => {
                 ))}
               </div>
 
-              {/* Social Media Links */}
-              <div className="animate-fade-in-up animate-delay-400">
-                <h4 className="text-xl font-semibold mb-6 text-foreground">
-                  Follow Me
-                </h4>
+              {/* Social Media */}
+              <div>
+                <h4 className="text-xl font-semibold mb-6 text-foreground">Follow Me</h4>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => (
                     <a
@@ -284,7 +173,7 @@ const ContactSection = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-12 h-12 bg-secondary/50 rounded-full flex items-center justify-center text-xl hover:bg-primary hover:scale-110 transition-all duration-300 hover-glow animate-scale-in animate-delay-${index * 100}`}
+                      className="w-12 h-12 bg-secondary/50 rounded-full flex items-center justify-center text-xl hover:bg-primary hover:scale-110 transition-all duration-300 hover-glow"
                       title={social.name}
                     >
                       {social.icon}
@@ -293,8 +182,8 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              {/* Availability Status */}
-              <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 animate-fade-in-up animate-delay-500">
+              {/* Status */}
+              <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-3 h-3 bg-cyber-green rounded-full animate-pulse" />
                   <span className="font-medium text-foreground">Available for Projects</span>

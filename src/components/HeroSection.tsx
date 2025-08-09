@@ -1,4 +1,8 @@
 import { useState, useEffect } from 'react';
+import { FaGithub } from "react-icons/fa";
+import { LiaHackerrank } from "react-icons/lia";
+import { CiLinkedin } from "react-icons/ci";
+import { SiLeetcode } from 'react-icons/si';
 
 const HeroSection = () => {
   const [displayedText, setDisplayedText] = useState('');
@@ -6,9 +10,8 @@ const HeroSection = () => {
   const [isDeleting, setIsDeleting] = useState(false);
 
   const roles = [
-    'Frontend Developer',
+    'MERN Stack Developer',
     'React Specialist',
-    'UI/UX Designer',
     'Web Developer'
   ];
 
@@ -65,7 +68,7 @@ const HeroSection = () => {
               
               {/* Name */}
               <h1 className="text-5xl lg:text-7xl font-bold text-foreground animate-fade-in-up animate-delay-200">
-                John <span className="gradient-text">Doe</span>
+                Adarsh <span className="gradient-text">Gurjar</span>
               </h1>
               
               {/* Dynamic Role */}
@@ -78,8 +81,9 @@ const HeroSection = () => {
               
               {/* Tagline */}
               <p className="text-xl text-muted-foreground max-w-lg animate-fade-in-up animate-delay-400">
-                I build exceptional digital experiences that combine beautiful design with powerful functionality.
-              </p>
+  I craft seamless web applications with elegant design and robust backend integration.
+</p>
+
             </div>
 
             {/* CTA Buttons */}
@@ -100,15 +104,20 @@ const HeroSection = () => {
 
             {/* Social Links */}
             <div className="flex space-x-6 animate-fade-in-up animate-delay-600">
+
+           
+
+
               {[
-                { name: 'GitHub', icon: '⚡' },
-                { name: 'LinkedIn', icon: '🔗' },
-                { name: 'Twitter', icon: '🐦' },
-                { name: 'Email', icon: '📧' }
+                { name: 'GitHub', icon: <FaGithub size={28} /> , href: 'https://github.com/adarsh12u' },
+                { name: 'LinkedIn', icon: <CiLinkedin size={28} /> , href: 'https://www.linkedin.com/in/adarsh-gurjar-6170b0249/' },
+                { name: 'Leetcode', icon: <SiLeetcode size={25} /> , href: 'https://leetcode.com/Adarshgurjar123/' },
+                { name: 'HackerRank', icon: <LiaHackerrank size={30} /> , href: 'https://www.hackerrank.com/profile/adarsh7470827890' },
+                // { name: 'Email', icon: <IoMail /> }
               ].map((social, index) => (
                 <a
                   key={social.name}
-                  href="#"
+                  href={social.href}
                   className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-lg hover:bg-primary hover:scale-110 transition-all duration-300 hover-glow"
                   title={social.name}
                 >
@@ -120,28 +129,35 @@ const HeroSection = () => {
 
           {/* Right Side - Profile Image */}
           <div className="flex justify-center lg:justify-end animate-slide-in-right">
-            <div className="relative">
-              {/* Glow effect behind image */}
-              <div className="absolute inset-0 bg-gradient-primary rounded-full blur-3xl opacity-30 animate-glow" />
-              
-              {/* Main profile image */}
-              <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/20 animate-float">
-                <img
-                  src={'/assets/profile-hero.jpg'}
-                  alt="Profile"
-                  className="w-full h-full object-cover"
-                />
-                
-                {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent" />
-              </div>
-              
-              {/* Floating accent elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-cyber-green rounded-full animate-float opacity-80" style={{ animationDelay: '1s' }} />
-              <div className="absolute -bottom-6 -left-6 w-6 h-6 bg-sunset-orange rounded-full animate-float opacity-80" style={{ animationDelay: '2s' }} />
-              <div className="absolute top-1/2 -right-8 w-4 h-4 bg-neon-purple rounded-full animate-float opacity-80" style={{ animationDelay: '3s' }} />
-            </div>
-          </div>
+  <div className="relative">
+    {/* Glow effect BEHIND everything */}
+    <div className="absolute inset-0 -z-10 bg-gradient-primary rounded-full blur-3xl opacity-30" />
+    
+    {/* Main profile image with clean border */}
+    <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary animate-float">
+      <img
+        src={'/me.png'}
+        alt="Profile"
+        className="w-full h-full object-cover"
+      />
+    </div>
+    
+    {/* Floating accent elements */}
+    <div
+      className="absolute -top-4 -right-4 w-8 h-8 bg-cyber-green rounded-full animate-float opacity-80"
+      style={{ animationDelay: '1s' }}
+    />
+    <div
+      className="absolute -bottom-6 -left-6 w-6 h-6 bg-sunset-orange rounded-full animate-float opacity-80"
+      style={{ animationDelay: '2s' }}
+    />
+    <div
+      className="absolute top-1/2 -right-8 w-4 h-4 bg-neon-purple rounded-full animate-float opacity-80"
+      style={{ animationDelay: '3s' }}
+    />
+  </div>
+</div>
+
         </div>
       </div>
 

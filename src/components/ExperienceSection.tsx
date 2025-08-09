@@ -5,44 +5,46 @@ const ExperienceSection = () => {
 
   const experiences = [
     {
-      title: 'Senior Frontend Developer',
-      company: 'Tech Innovation Corp',
-      duration: '2022 - Present',
-      location: 'Remote',
-      description: 'Leading frontend development for multiple client projects, mentoring junior developers, and implementing modern React solutions with TypeScript.',
-      achievements: [
-        'Improved application performance by 40% through optimization',
-        'Led a team of 4 developers on major client projects',
-        'Implemented CI/CD pipelines reducing deployment time by 60%'
-      ],
-      technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS']
-    },
-    {
       title: 'Frontend Developer',
-      company: 'Digital Solutions Ltd',
-      duration: '2021 - 2022',
-      location: 'New York, NY',
-      description: 'Developed responsive web applications and collaborated with design teams to create intuitive user interfaces.',
+      company: 'Lemosys Infotech Pvt Ltd',
+      duration: 'Nov-2024 - Present',
+      location: 'Onsite',
+      description: 'Worked as a frontend developer building scalable and interactive web applications. Delivered complex features across multiple real-world products like an APM monitoring platform and a multi-functional education & property management system.',
       achievements: [
-        'Delivered 15+ successful projects on time and within budget',
-        'Reduced code review time by 30% through better documentation',
-        'Introduced modern testing practices improving code coverage to 85%'
+        'Built a real-time Application Performance Monitoring (APM) tool for tracking and visualizing live application metrics',
+        'Developed Centurion, a feature-rich web platform with real-time chat, video course streaming, multi-user access control, and property management modules',
+        'Integrated Google Maps API to display location-based data and enhance user interaction across modules',
+        'Focused on responsive design and smooth UI/UX using React, Tailwind CSS, and Next.js',
+        'Collaborated closely with designers and backend developers to implement scalable and maintainable frontend architecture',
       ],
-      technologies: ['React', 'JavaScript', 'Vue.js', 'SCSS']
-    },
+      technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Google Maps API', 'WebSockets']
+    },    
     {
-      title: 'Junior Web Developer',
-      company: 'StartUp Hub',
-      duration: '2020 - 2021',
-      location: 'San Francisco, CA',
-      description: 'Built and maintained company websites, learned modern development practices, and contributed to open-source projects.',
+      title: 'Software Developer Intern',
+      company: 'Walkover Technologies',
+      duration: 'July 2024 - Oct 2024',
+      location: 'Onsite',
+      description: 'Contributed to ViaSocket, an AI-driven workflow automation platform, by developing interactive web application features using React.js (front-end) and Node.js (back-end). Collaborated with cross-functional teams to integrate intelligent automation features and optimize system performance, ensuring scalable and efficient workflows.',
       achievements: [
-        'Developed company portfolio website increasing leads by 25%',
-        'Contributed to 5+ open-source projects',
-        'Completed advanced React certification'
+        'Implemented Single Sign-On (SSO) functionality under the guidance of senior developers, enhancing user authentication flow',
+        'Optimized application code and APIs to reduce load times by ~15%, improving user experience',
+        'Gained hands-on experience in building full-stack features and deepened understanding of scalable architecture and automation workflows'
       ],
-      technologies: ['HTML', 'CSS', 'JavaScript', 'React']
-    }
+      technologies: ['React.js', 'Node.js', 'JavaScript', 'Material UI' ]
+    },
+    // {
+    //   title: '',
+    //   company: 'StartUp Hub',
+    //   duration: '2020 - 2021',
+    //   location: 'San Francisco, CA',
+    //   description: 'Built and maintained company websites, learned modern development practices, and contributed to open-source projects.',
+    //   achievements: [
+    //     'Developed company portfolio website increasing leads by 25%',
+    //     'Contributed to 5+ open-source projects',
+    //     'Completed advanced React certification'
+    //   ],
+    //   technologies: ['HTML', 'CSS', 'JavaScript', 'React']
+    // }
   ];
 
   useEffect(() => {
