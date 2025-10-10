@@ -136,7 +136,7 @@ const HeroSection = () => {
     {/* Main profile image with clean border */}
     <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary animate-float">
       <img
-        src={'/me.png'}
+        src={'/my-edit.png'}
         alt="Profile"
         className="w-full h-full object-cover"
       />

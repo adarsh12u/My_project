@@ -73,6 +73,18 @@ const ProjectsSection = () => {
 
 
   const projects = [
+     {
+      id: 10,
+      title: 'Section 8 University',
+     description: 'Built a feature-rich real estate management platform with an interactive USA map, allowing users to explore county wise data such as population, crime reports, and property details using Zillow API.',
+
+      image: '/section8.png',
+      technologies: ['React','PHP','SQL','Tailwind CSS','Zillow API','Google Maps API'],
+      category: 'fullstack',
+      // githubUrl: 'https://github.com/adarsh12u/blog-market-Application-',
+      liveUrl: 'https://section8university.codingserver.com/login',
+      featured: false
+    },
     {
       id: 1,
       title: 'Blog Application',
