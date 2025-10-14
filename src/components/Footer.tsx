@@ -130,12 +130,12 @@ const Footer = () => {
               <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                 {/* Copyright */}
                 <div className="text-center md:text-left animate-fade-in-up animate-delay-600">
-                  {/* <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground text-sm">
                     © {currentYear} Adarsh Gurjar. All rights reserved.
                   </p>
                   <p className="text-muted-foreground text-xs mt-1">
                     Built with React, TypeScript & Tailwind CSS
-                  </p> */}
+                  </p>
                 </div>
   
                 {/* Back to Top Button */}
