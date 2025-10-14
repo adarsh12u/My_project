@@ -131,7 +131,7 @@ const Footer = () => {
                 {/* Copyright */}
                 <div className="text-center md:text-left animate-fade-in-up animate-delay-600">
                   <p className="text-muted-foreground text-sm">
-                    © {currentYear} Adarsh Gurjar. All rights reserved.
+                    © {currentYear} Adarsh Gurjar. All rights reserved
                   </p>
                   <p className="text-muted-foreground text-xs mt-1">
                     Built with React, TypeScript & Tailwind CSS
