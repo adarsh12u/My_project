@@ -129,29 +129,29 @@ const ProjectsSection = () => {
     },
 
 
-    {
-      id: 4,
-      title: 'Image Generator',
-      description: 'In my Image Generator project, I have combined technology and creativity to create a digital art experience using the power of the Unsplash API. here you can search images as per your choice ',
-      image: '/fotor-ai-2024011619138.jpg',
-      technologies: ['React','React Query'],
-      category: 'frontend',
-      githubUrl: 'https://github.com/adarsh12u/ImageGenerator',
-      liveUrl: 'https://image-generator-ruby.vercel.app/',
-      featured: false
-    },
+    // {
+    //   id: 4,
+    //   title: 'Image Generator',
+    //   description: 'In my Image Generator project, I have combined technology and creativity to create a digital art experience using the power of the Unsplash API. here you can search images as per your choice ',
+    //   image: '/fotor-ai-2024011619138.jpg',
+    //   technologies: ['React','React Query'],
+    //   category: 'frontend',
+    //   githubUrl: 'https://github.com/adarsh12u/ImageGenerator',
+    //   liveUrl: 'https://image-generator-ruby.vercel.app/',
+    //   featured: false
+    // },
 
-    {
-      id: 5,
-      title: 'TODO List',
-      description: 'Created a user-friendly TODO List app—just jot down tasks and tick them off. Simple and effective for staying organized. Tech meets practicality for a seamless task management experience ',
-      image: 'https://images.pexels.com/photos/12883026/pexels-photo-12883026.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React','Mterial UI'],
-      category: 'frontend',
-      githubUrl: 'https://github.com/adarsh12u/React_todo',
-      liveUrl: 'https://react-todo-cyan-xi.vercel.app/',
-      featured: false
-    },
+    // {
+    //   id: 5,
+    //   title: 'TODO List',
+    //   description: 'Created a user-friendly TODO List app—just jot down tasks and tick them off. Simple and effective for staying organized. Tech meets practicality for a seamless task management experience ',
+    //   image: 'https://images.pexels.com/photos/12883026/pexels-photo-12883026.jpeg?auto=compress&cs=tinysrgb&w=800',
+    //   technologies: ['React','Mterial UI'],
+    //   category: 'frontend',
+    //   githubUrl: 'https://github.com/adarsh12u/React_todo',
+    //   liveUrl: 'https://react-todo-cyan-xi.vercel.app/',
+    //   featured: false
+    // },
    
     {
       id: 6,
