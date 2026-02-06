@@ -39,7 +39,7 @@ const Footer = () => {
                   Adarsh Gurjar
                 </div>
                 <p className="text-muted-foreground max-w-sm">
-                  Frontend Developer passionate about creating beautiful, 
+                  Software Developer passionate about creating beautiful, 
                   functional, and user-centered digital experiences.
                 </p>
                 <div className="flex space-x-4">

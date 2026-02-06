@@ -73,18 +73,18 @@ const ProjectsSection = () => {
 
 
   const projects = [
-     {
-      id: 10,
-      title: 'Section 8 University',
-     description: 'Built a feature-rich real estate management platform with an interactive USA map, allowing users to explore county wise data such as population, crime reports, and property details using Zillow API.',
+    //  {
+    //   id: 10,
+    //   title: 'Section 8 University',
+    //  description: 'Built a feature-rich real estate management platform with an interactive USA map, allowing users to explore county wise data such as population, crime reports, and property details using Zillow API.',
 
-      image: '/section8.png',
-      technologies: ['React','PHP','SQL','Tailwind CSS','Zillow API','Google Maps API'],
-      category: 'fullstack',
-      // githubUrl: 'https://github.com/adarsh12u/blog-market-Application-',
-      liveUrl: 'https://section8university.codingserver.com/login',
-      featured: false
-    },
+    //   image: '/section8.png',
+    //   technologies: ['React','PHP','SQL','Tailwind CSS','Zillow API','Google Maps API'],
+    //   category: 'fullstack',
+    //   // githubUrl: 'https://github.com/adarsh12u/blog-market-Application-',
+    //   liveUrl: 'https://section8university.codingserver.com/login',
+    //   featured: false
+    // },
     {
       id: 1,
       title: 'Blog Application',
@@ -116,17 +116,17 @@ const ProjectsSection = () => {
 
 
    
-    {
-      id: 3,
-      title: 'HR management system',
-      description: 'A HR management system website that have auth section to create users and reset password and most important here you can perform crud operation you can add, delete , update the client ',
-      image: '/fotor-ai-202401161904.jpg',
-      technologies: ['React','Node','Mongodb','Material UI'],
-      category: 'fullstack',
-      githubUrl: 'https://github.com/adarsh12u/HR-MANAGEMENT-SYSTEM',
-      liveUrl: 'https://hr-management-system-lac.vercel.app/',
-      featured: false
-    },
+    // {
+    //   id: 3,
+    //   title: 'HR management system',
+    //   description: 'A HR management system website that have auth section to create users and reset password and most important here you can perform crud operation you can add, delete , update the client ',
+    //   image: '/fotor-ai-202401161904.jpg',
+    //   technologies: ['React','Node','Mongodb','Material UI'],
+    //   category: 'fullstack',
+    //   githubUrl: 'https://github.com/adarsh12u/HR-MANAGEMENT-SYSTEM',
+    //   liveUrl: 'https://hr-management-system-lac.vercel.app/',
+    //   featured: false
+    // },
 
 
     // {

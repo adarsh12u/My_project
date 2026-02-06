@@ -5,11 +5,11 @@ const ExperienceSection = () => {
 
   const experiences = [
     {
-      title: 'Frontend Developer',
+      title: 'Software Developer',
       company: 'Lemosys Infotech Pvt Ltd',
       duration: 'Nov-2024 - Present',
       location: 'Onsite',
-      description: 'Worked as a frontend developer building scalable and interactive web applications. Delivered complex features across multiple real-world products like an APM monitoring platform and a multi-functional education & property management system.',
+      description: 'Worked as a Software developer building scalable and interactive web applications. Delivered complex features across multiple real-world products like an APM monitoring platform and a multi-functional education & property management system.',
       achievements: [
         'Built a real-time Application Performance Monitoring (APM) tool for tracking and visualizing live application metrics',
         'Developed Centurion, a feature-rich web platform with real-time chat, video course streaming, multi-user access control, and property management modules',
