@@ -86,6 +86,24 @@ const ProjectsSection = () => {
     //   featured: false
     // },
     {
+      id: 7,
+      title: 'Ticketloom',
+      description:
+        'Multi-tenant AI-assisted customer support platform for B2B teams — tickets, CRM, realtime chat, knowledge base with RAG, analytics, BullMQ workers, and full Docker packaging.',
+      image: '/TicketLoom.png',
+      technologies: [
+        'Next.js',
+        'TypeScript',
+        'PostgreSQL',
+        'Redis',
+        'Socket.IO',
+        'Docker',
+      ],
+      category: 'fullstack',
+      githubUrl: 'https://github.com/adarsh12u/Ticketloom',
+      featured: true,
+    },
+    {
       id: 1,
       title: 'Blog Application',
       description: 'The Application I have developed allows users to create their own blog, where users can publish their own opinions.A blog application is basically a web site which is used for chronological listing of blog posts',
